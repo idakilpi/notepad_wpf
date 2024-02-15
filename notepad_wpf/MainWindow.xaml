@@ -9,14 +9,16 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Tiedosto">
-                <MenuItem Header="_Avaa..."/>
-                <MenuItem Header="Tallenna _nimellä..."/>
-                <MenuItem Header="_Tulosta..."/>
+                <MenuItem Header="_Avaa..." Click="AvaaMenuItem_Click"/>
+                <MenuItem Header="Tallenna _nimellä..." Click="TallennaNimellaMenuItem_Click"/>
+                <MenuItem Header="_Tulosta..." Click="TulostaMenuItem_Click"/>
                 <Separator />
                 <MenuItem Header="_Lopeta" Click="MenuItem_Click" />
             </MenuItem>
             <MenuItem Header="_Muokkaa">
-                <MenuItem Header="_Kopioi" Command="ApplicationCommands.Copy"/>
+                    <MenuItem Header="_Kopioi" Command="ApplicationCommands.Copy"/>
+                    <MenuItem Header="_Liitä" Command="ApplicationCommands.Paste"/>
+                    <MenuItem Header="_Leikkaa" Command="ApplicationCommands.Cut"/>
             </MenuItem>
             <MenuItem Header="_Muotoilu">
                 <MenuItem Header="_Fontin koko..." Click="FontStyleMenuItem_Click"/>
