@@ -1,0 +1,32 @@
+﻿<Window x:Class="notepad_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:notepad_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Tiedosto">
+                <MenuItem Header="_Avaa..."/>
+                <MenuItem Header="Tallenna _nimellä..."/>
+                <MenuItem Header="_Tulosta..."/>
+                <Separator />
+                <MenuItem Header="_Lopeta" Click="MenuItem_Click" />
+            </MenuItem>
+            <MenuItem Header="_Muokkaa">
+                <MenuItem Header="_Kopioi" Command="ApplicationCommands.Copy"/>
+            </MenuItem>
+            <MenuItem Header="_Muotoilu">
+                <MenuItem Header="_Fontin koko..." Click="FontStyleMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom" Height="20">
+            <StatusBarItem x:Name="statusPituus" Content="TESTI"/>
+        </StatusBar>
+        <Grid>
+            <TextBox x:Name="textBox" AcceptsReturn="True" TextChanged="textBox_TextChanged"/>
+        </Grid>
+    </DockPanel>
+</Window>
